@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo de Exploração SQL 💻</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Campo de Exploração SQL 💻</h1>
+        <p class="subtitle">1º Clique: Revela a Tag SQL | 2º Clique: Revela a documentação e o que ela faz!</p>
+        
+        <div class="stats-bar">
+            <div>Campos Explorados: <span id="explored-count" class="stat-val">0</span> / 25</div>
+        </div>
+
+        <!-- Grade com as 25 células numeradas -->
+        <div class="grid" id="minefield"></div>
+
+        <!-- Terminal de Documentação que abre no segundo clique -->
+        <div class="terminal hidden" id="terminal-panel">
+            <h3>[ DOCUMENTAÇÃO DO COMANDO: <span id="active-field-tag" class="stat-val"></span> ]</h3>
+            <p class="label-doc">O que esta estrutura faz no banco de dados:</p>
+            <p id="tip-text">A descrição do comando aparecerá aqui...</p>
+            <button id="close-btn">FECHAR TERMINAL</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
